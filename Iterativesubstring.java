@@ -3,7 +3,7 @@ import java.util.*;
 public class Iterativesubstring {
 
   public static void main(String[] args) {
-    int arr[] = { 12, 32, 342, 4 };
+    int arr[] = { 1,12,3};
     
  List<List<Integer>> ans =subset(arr);
  for(List<Integer> list:ans)
@@ -18,7 +18,8 @@ public class Iterativesubstring {
     for (int num : arr) {
       int size=outerlist.size();
       for (int i = 0; i < size; i++) {
-        List<Integer> internal= new ArrayList<>();
+        List<Integer> internal= new ArrayList<>(outerlist.get(i));
+        // for every number a size no. of lists are created here
         internal.add(num);
         outerlist.add(internal);
         
