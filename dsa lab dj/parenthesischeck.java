@@ -1,9 +1,13 @@
+import java.util.Scanner;
+
 public class parenthesischeck {
 
   static int top = -1;
 
   public static void main(String[] args) {
-    String s = "{(a+b)-c}";
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the equation");
+    String s = sc.nextLine();
 
     char[] stack = new char[s.length()];
 
@@ -53,6 +57,10 @@ public class parenthesischeck {
 
     if (l == 1) {
       top--;
+    }
+    if(l==0)
+    {
+      System.out.println("bracket mismatch");
     }
   }
 
